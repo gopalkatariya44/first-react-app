@@ -1,17 +1,27 @@
 import './App.css';
-import { useState } from 'react';
-import Axios from 'axios';
+import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
+import { Home } from "./pages/Home";
+import {Contact} from "./pages/Contect";
+import {Menu} from "./pages/Menu";
+import {Navbar} from "./Navbar";
+
+
 
 function App() {
 
   return (
-    <div className="App"></div>
+    <div className="App">
+      <Router>
+            <Navbar/>
+        <Routes >
+            <Route path="/" element={<Home/>}/>
+            <Route path="/menu" element={<Menu/>}/>
+            <Route path="/contact" element={<Contact/>}/>
+            <Route path="*" element={<h1>PAGE NOT FOUND</h1>}/>
+        </Routes>
+      </Router>
+    </div>
   );
 }
+
 export default App;
-
-
-
-// fetch("https://catfact.ninja/fact").then((res) => res.json()).then((data) => {
-//   console.log(data);
-// });
