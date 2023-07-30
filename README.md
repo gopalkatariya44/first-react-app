@@ -1,5 +1,14 @@
 # Getting Started with Create React App
 
+###### careate app:
+```
+npx create-react-app todo-list appname
+```
+###### run app:
+```
+npm start
+```
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
