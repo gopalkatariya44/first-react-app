@@ -17,7 +17,7 @@ export const Home = () => {
     return (
         <div>
             <p>{data?.fact}</p>
-            <button>Update Fact</button>
+            <button onClick={refetch}>Update Fact</button>
         </div>
     )
 };
